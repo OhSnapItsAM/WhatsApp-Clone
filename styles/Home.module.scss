@@ -1,0 +1,164 @@
+@import "./colors";
+
+.home {
+  height: 100vh;
+  width: 100vw;
+
+  display: grid;
+  place-items: center;
+
+  // Screen background color
+  background: linear-gradient(
+    to bottom,
+    $background-color1,
+    $background-color1 12.6%,
+    $background-color2 10%
+  );
+
+  user-select: none;
+
+  .container {
+    background-color: white;
+    box-shadow: 0px 0px 9px rgb(170, 170, 170);
+
+    display: flex;
+
+    .container__user {
+      width: inherit;
+      height: inherit;
+
+      display: grid;
+      place-items: center;
+
+      .user__container {
+        // border: 1px solid black;
+
+        text-align: center;
+
+        height: 50vh;
+        width: 50vw;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        h5 {
+          font-size: 40px;
+        }
+
+        .user__info {
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          position: relative;
+
+          label {
+            font-size: 15px;
+          }
+
+          input {
+            padding: 5px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+
+            color: white;
+            &::placeholder {
+              color: white;
+            }
+          }
+
+          .user__username__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+
+            margin: 0px 10px;
+
+            .user__username {
+              padding: 10px;
+              margin: 10px 0px;
+
+              border-radius: 5px;
+
+              background-color: $background-color1;
+            }
+          }
+
+          .user__password__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+
+            margin: 0px 10px;
+
+            .user__password {
+              margin: 10px 0px;
+              padding: 10px;
+
+              border-radius: 5px;
+
+              background-color: $background-color2;
+            }
+            .showPassword {
+              color: blue;
+              cursor: pointer;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) {
+  .home {
+    .container {
+      height: 100%;
+      width: 100%;
+
+      .container__user {
+        .user__container {
+          .user__info {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+        .changeArea {
+          color: $background-color1;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .home {
+    .container {
+      .container__user {
+        .user__container {
+          .user__info {
+            display: flex;
+            flex-direction: row;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .home {
+    .container {
+      height: 96.3vh;
+      width: 83.3vw;
+    }
+  }
+}

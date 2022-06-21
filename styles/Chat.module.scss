@@ -1,0 +1,372 @@
+@import "./colors";
+
+.chat {
+  display: flex;
+  flex: 0.7;
+
+  .chat__container {
+    width: 100%;
+
+    .messages__empty {
+      height: 100%;
+
+      display: grid;
+      place-items: center;
+
+      .empty__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .empty__info {
+          margin-top: 20px;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          p {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+
+    .messages__info {
+      display: flex;
+      flex-direction: column;
+
+      height: 100%;
+      .info__header {
+        flex: 0.06;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: $container-background-color;
+      }
+
+      .info__messages {
+        flex: 0.88;
+        height: 100%;
+
+        background-image: url("https://preview.redd.it/qwd83nc4xxf41.jpg?width=640&crop=smart&auto=webp&s=e82767fdf47158e80604f407ce4938e44afc6c25");
+
+        position: relative;
+
+        overflow-y: scroll;
+
+        // -------------------- REMOVE SCROLLBAR VISUAL ------------------------------
+
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        // ----------------------------------------------------------------------------
+
+        display: flex;
+        flex-direction: column-reverse;
+
+        .messages__container {
+          padding: 20px 0px;
+
+          margin-right: auto;
+          margin-left: 10px;
+          position: relative;
+
+          .container {
+            background-color: $background-color2;
+            width: fit-content;
+            height: fit-content;
+            padding: 10px 10px;
+            border-radius: 10px;
+            text-align: left;
+
+            p {
+              max-width: 25vw;
+              word-wrap: break-word;
+            }
+
+            .username {
+              position: absolute;
+              top: 0;
+              left: 0;
+              font-size: 12px;
+            }
+          }
+        }
+
+        .messages__receiver {
+          padding: 20px 0px;
+
+          margin-left: auto;
+          margin-right: 10px;
+          position: relative;
+
+          .container {
+            background-color: $background-color1;
+            width: fit-content;
+            height: fit-content;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: right;
+
+            p {
+              max-width: 25vw;
+              word-wrap: break-word;
+            }
+            .username {
+              position: absolute;
+              top: 0;
+              right: 0;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .info__input {
+        flex: 0.06;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: $container-background-color;
+
+        padding: 0px 10px;
+
+        svg {
+          height: 20px;
+          margin: 0px 5px;
+        }
+
+        .input__container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          background-color: #fff;
+          border-radius: 5px;
+
+          margin: 0px 5px;
+
+          flex: 1;
+
+          input {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            padding: 7px 10px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) {
+  .chat {
+    display: none;
+  }
+  .chat__show {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+    .rightArrow {
+      height: 20px;
+      position: absolute;
+      left: 0;
+      margin: 10px 20px 0px;
+    }
+
+    .chat__container {
+      width: 100%;
+
+      .messages__empty {
+        height: 100vh;
+
+        display: grid;
+        place-items: center;
+
+        .empty__container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .empty__info {
+            margin-top: 20px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            p {
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+
+      .messages__info {
+        display: flex;
+        flex-direction: column;
+
+        height: 100vh;
+
+        .info__header {
+          flex: 0.06;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          background-color: $container-background-color;
+        }
+
+        .info__messages {
+          flex: 0.88;
+          height: 100%;
+
+          background-image: url("https://preview.redd.it/qwd83nc4xxf41.jpg?width=640&crop=smart&auto=webp&s=e82767fdf47158e80604f407ce4938e44afc6c25");
+
+          position: relative;
+
+          overflow-y: scroll;
+
+          // -------------------- REMOVE SCROLLBAR VISUAL ------------------------------
+
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+
+          // ----------------------------------------------------------------------------
+
+          display: flex;
+          flex-direction: column-reverse;
+
+          .messages__container {
+            padding: 20px 0px;
+
+            margin-right: auto;
+            margin-left: 10px;
+            position: relative;
+
+            .container {
+              background-color: $background-color2;
+              width: fit-content;
+              height: fit-content;
+              padding: 10px 10px;
+              border-radius: 10px;
+              text-align: left;
+
+              p {
+                max-width: 25vw;
+                word-wrap: break-word;
+              }
+
+              .username {
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 12px;
+              }
+            }
+          }
+
+          .messages__receiver {
+            padding: 20px 0px;
+
+            margin-left: auto;
+            margin-right: 10px;
+            position: relative;
+
+            .container {
+              background-color: $background-color1;
+              width: fit-content;
+              height: fit-content;
+              padding: 10px;
+              border-radius: 10px;
+              text-align: right;
+
+              p {
+                max-width: 25vw;
+                word-wrap: break-word;
+              }
+              .username {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 12px;
+              }
+            }
+          }
+        }
+
+        .info__input {
+          flex: 0.06;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          background-color: $container-background-color;
+
+          padding: 0px 10px;
+
+          svg {
+            height: 20px;
+            margin: 0px 5px;
+          }
+
+          .input__container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: #fff;
+            border-radius: 5px;
+
+            margin: 0px 5px;
+
+            flex: 1;
+
+            input {
+              border: none;
+              outline: none;
+              background-color: transparent;
+              padding: 7px 10px;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .chat {
+    display: flex;
+    flex: 0.7;
+
+    .rightArrow {
+      display: none;
+    }
+  }
+}
