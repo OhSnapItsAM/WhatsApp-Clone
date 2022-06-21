@@ -157,7 +157,7 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
-                  <button type="submit" hidden></button>
+                  <button type="submit">Sign-Up</button>
                   <p
                     onClick={() => setSignup(!signup)}
                     className={styles.changeArea}
@@ -209,7 +209,7 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
-                  <button type="submit" hidden></button>
+                  <button type="submit">Sign-In</button>
                   <p
                     onClick={() => setSignup(!signup)}
                     className={styles.changeArea}

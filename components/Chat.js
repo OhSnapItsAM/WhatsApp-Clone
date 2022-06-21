@@ -124,6 +124,9 @@ const Chat = () => {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                 />
+                <button className={styles.button} type="submit">
+                  Enter
+                </button>
               </form>
               <MicrophoneIcon />
             </div>
