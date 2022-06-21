@@ -114,10 +114,11 @@ export default function Home() {
         <div className={styles.home}>
           {/* Login/Signup Container */}
           <div className={styles.container}>
-            <h2>Whats App Clone</h2>
             {signup ? (
               // Signup
               <div className={styles.container__user}>
+                <h2>Whats App Clone</h2>
+
                 <form
                   onSubmit={signupHandler}
                   className={styles.user__container}
@@ -170,6 +171,8 @@ export default function Home() {
             ) : (
               // Signin
               <div className={styles.container__user}>
+                <h2>Whats App Clone</h2>
+
                 <form
                   onSubmit={signinHandler}
                   className={styles.user__container}
