@@ -28,7 +28,11 @@
 
     padding-top: 50px;
 
-    font-size: 30px;
+    h2 {
+      font-size: 55px;
+      color: $background-color1;
+      text-align: center;
+    }
 
     .container__user {
       width: inherit;
