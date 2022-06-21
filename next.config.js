@@ -8,6 +8,9 @@ const nextConfig = {
     PUSHER_APP_SECRET: process.env.PUSHER_APP_SECRET,
     PUSHER_APP_CLUSTER: process.env.PUSHER_APP_CLUSTER,
   },
+  images: {
+    domains: ["cdn.pixabay.com"],
+  },
 };
 
 module.exports = nextConfig;
