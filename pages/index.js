@@ -114,6 +114,7 @@ export default function Home() {
         <div className={styles.home}>
           {/* Login/Signup Container */}
           <div className={styles.container}>
+            <h2>Whats App</h2>
             {signup ? (
               // Signup
               <div className={styles.container__user}>
