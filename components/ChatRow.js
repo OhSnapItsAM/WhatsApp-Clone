@@ -17,26 +17,29 @@ const ChatRow = ({ name, date }) => {
       });
   };
   return (
-    <div
-      className={styles.chatRow}
-      onClick={() => {
-        axios.post("/api/chat/getName", { name }).then(({ data }) => {
-          dispatch({
-            type: "INFO",
-            item: [
-              {
-                name: data[0]?.name || name,
-                data,
-              },
-            ],
-          });
-        });
-      }}
-    >
-      <div className={styles.chatRow__container}>
+    <div className={styles.chatRow}>
+      <div className={styles.trash}>
         <TrashIcon onClick={trashHandler} />
-        <h5>{name}</h5>
-        <p>{date}</p>
+      </div>
+      <div
+        onClick={() => {
+          axios.post("/api/chat/getName", { name }).then(({ data }) => {
+            dispatch({
+              type: "INFO",
+              item: [
+                {
+                  name: data[0]?.name || name,
+                  data,
+                },
+              ],
+            });
+          });
+        }}
+      >
+        <div className={styles.chatRow__container}>
+          <h5>{name}</h5>
+          <p>{date}</p>
+        </div>
       </div>
     </div>
   );

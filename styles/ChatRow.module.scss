@@ -5,15 +5,9 @@
   place-items: center;
   position: relative;
 
-  &:hover {
-    background-color: $container-background-color;
-    cursor: pointer;
-  }
-
-  .chatRow__container {
-    display: flex;
-
-    padding: 20px 0px;
+  .trash {
+    height: 100%;
+    width: 50px;
 
     svg {
       position: absolute;
@@ -24,17 +18,30 @@
       margin: 20px;
       z-index: 999;
     }
+  }
+  &:hover {
+    background-color: $container-background-color;
+    cursor: pointer;
+  }
 
-    h5 {
-      font-weight: 500;
-    }
-    p {
-      font-size: 12px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      margin-right: 10px;
-      padding: 5px 0px;
+  div {
+    .chatRow__container {
+      display: flex;
+      align-items: center;
+
+      padding: 20px 0px;
+
+      h5 {
+        font-weight: 500;
+      }
+      p {
+        font-size: 12px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-right: 10px;
+        padding: 5px 0px;
+      }
     }
   }
 }
