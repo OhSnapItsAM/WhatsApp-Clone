@@ -58,6 +58,7 @@
         position: relative;
 
         overflow-y: scroll;
+        scroll-behavior: smooth;
 
         // -------------------- REMOVE SCROLLBAR VISUAL ------------------------------
 
@@ -225,7 +226,7 @@
         display: flex;
         flex-direction: column;
 
-        height: 100vh;
+        height: 100%;
 
         .info__header {
           flex: 0.06;
@@ -246,6 +247,7 @@
           position: relative;
 
           overflow-y: scroll;
+          scroll-behavior: smooth;
 
           // -------------------- REMOVE SCROLLBAR VISUAL ------------------------------
 
@@ -275,16 +277,17 @@
               border-radius: 10px;
               text-align: left;
 
-              p {
-                max-width: 25vw;
-                word-wrap: break-word;
-              }
+              max-width: 50vw;
+              word-wrap: break-word;
 
               .username {
                 position: absolute;
                 top: 0;
                 left: 0;
                 font-size: 12px;
+
+                max-width: 25vw;
+                word-wrap: break-word;
               }
             }
           }
@@ -304,15 +307,16 @@
               border-radius: 10px;
               text-align: right;
 
-              p {
-                max-width: 25vw;
-                word-wrap: break-word;
-              }
+              max-width: 50vw;
+              word-wrap: break-word;
+
               .username {
                 position: absolute;
                 top: 0;
                 right: 0;
                 font-size: 12px;
+                max-width: 25vw;
+                word-wrap: break-word;
               }
             }
           }
