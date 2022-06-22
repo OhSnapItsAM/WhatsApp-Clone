@@ -83,7 +83,7 @@ const Sidebar = () => {
       {/* search */}
       <div className={styles.sidebar__search}>
         <form onSubmit={submitHandler} className={styles.search__container}>
-          <SearchIcon />
+          <SearchIcon onClick={submitHandler} />
           <input
             type="text"
             placeholder="Start a new chat"

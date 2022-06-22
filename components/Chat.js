@@ -78,6 +78,10 @@ const Chat = () => {
               <div className={styles.empty__info}>
                 <h2>WhatsApp Web Clone</h2>
                 <p>Now send and receive messages</p>
+                <p>
+                  If you want to make a chat. Please type in the search bar and
+                  once finished with the name. Either press the icon or enter
+                </p>
               </div>
             </div>
           </div>
